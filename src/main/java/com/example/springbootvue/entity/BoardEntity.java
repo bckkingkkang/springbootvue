@@ -21,4 +21,5 @@ public class BoardEntity {
     private String contents;
     private String update_dt;
     private String status;
+    private int view;
 }

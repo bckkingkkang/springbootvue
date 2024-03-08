@@ -32,6 +32,7 @@ public class BoardService {
                     .create_dt(entity.getCreate_dt())
                     .update_dt(entity.getUpdate_dt())
                     .status(entity.getStatus())
+                    .view(entity.getView())
                     .build();
             if(vo.getStatus().equals("N")) {
                 Vos.add(vo);

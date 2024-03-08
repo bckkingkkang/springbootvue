@@ -11,7 +11,7 @@ const routes = [
     {path:'/login', name:'Login', component: Login},
     {path:'/board/list', name:'board_list', component: List},
     {path:'/board/write', name:'board_write', component: Write},
-    {path:'/board/Detail', name:'board_detail', component: Detail},
+    {path:'/board/detail', name:'board_detail', component: Detail},
 
     { path: '/404', component: 404  },
     { path : '/:pathMatch(.*)*', redirect : '/404'}

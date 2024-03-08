@@ -14,7 +14,6 @@ export default {
           <li></li>
           <li><router-link to="/board/list">BOARD</router-link></li>
           <li><router-link to="/login">LOGIN</router-link></li>
-          <li><router-link to="/login">LOGIN</router-link></li>
         </ul>
         <i class="fab fa-twitter-square"></i>
         <i class="fas fa-bars"></i>

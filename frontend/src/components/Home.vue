@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <h1>HOME 화면 ^^</h1>
+  <h1>HOME</h1>
   <hr>
 
   <div>

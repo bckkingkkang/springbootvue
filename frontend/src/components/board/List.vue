@@ -1,6 +1,5 @@
 <template>
   <h1>BOARD LIST</h1>
-  <hr>
     <table class="table">
       <thead>
         <tr>
@@ -9,6 +8,7 @@
           <th>작성자</th>
           <th>등록일시</th>
           <th>수정일시</th>
+          <th>조회 수</th>
         </tr>
       </thead>
       <tbody>
@@ -18,11 +18,11 @@
           <td>{{ row.author }}</td>
           <td>{{ row.create_dt }}</td>
           <td>{{ row.update_dt }}</td>
+          <td>{{ row.view }}</td>
       </tr>
       </tbody>
     </table>
 
-  <hr>
   <div>
     <div class="write_btn">
       <button type="button" @click="writeBoard"><router-link to="/board/write">등록</router-link></button>
@@ -58,15 +58,15 @@ export default {
       }).then((res) => {
         this.list = res.data
       })
+
     },
     detailView(seq) {
       this.requestBody.seq = seq
 
       this.$router.push({
-        path : './Detail',
+        path : './detail',
         query : this.requestBody
       })
-
 
 
     },
@@ -75,12 +75,6 @@ export default {
         path : './Write'
       })
     },
-    fnPage(n) {
-      if(this.page !== n) {
-        this.page = n
-        this.getBoardList()
-      }
-    }
   }
 
 }
@@ -117,25 +111,29 @@ tbody tr:hover {
 /* 테이블 비율 */
 th:nth-child(1),
 td:nth-child(1) {
-  width: 4%;
+  width: 5%;
 }
 
 th:nth-child(2),
 td:nth-child(2) {
-  width: 24%;
+  width: 22.5%;
   cursor: pointer;
 }
 
 th:nth-child(3),
 td:nth-child(3) {
-  width: 24%;
+  width: 22.5%;
 }
 th:nth-child(4),
 td:nth-child(4) {
-  width: 24%;
+  width: 22.5%;
 }
 th:nth-child(5),
 td:nth-child(5) {
-  width: 24%;
+  width: 22.5%;
+}
+th:nth-child(6),
+td:nth-child(6) {
+  width: 5%;
 }
 </style>
