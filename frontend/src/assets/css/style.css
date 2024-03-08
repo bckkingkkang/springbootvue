@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: yellow;
+}
+.container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.side {
+  float: left;
+  width: 100px;
+
+  min-height: calc(100vh - 42px);
+
+}
+
+.contents {
+  float: left;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 42px);
+}
