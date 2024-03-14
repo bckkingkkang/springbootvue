@@ -34,6 +34,7 @@ public class BoardService {
                     .status(entity.getStatus())
                     .view(entity.getView())
                     .build();
+            /* 삭제된 게시글 X */
             if(vo.getStatus().equals("N")) {
                 Vos.add(vo);
             }
@@ -53,7 +54,6 @@ public class BoardService {
                 .author(entity.getAuthor())
                 .create_dt(entity.getCreate_dt())
                 .update_dt(entity.getUpdate_dt())
-                .status(entity.getStatus())
                 .build();
     }
 

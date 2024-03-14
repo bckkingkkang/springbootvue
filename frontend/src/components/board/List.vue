@@ -64,7 +64,7 @@ export default {
       this.requestBody.seq = seq
 
       this.$router.push({
-        path : './detail',
+        path : './Detail',
         query : this.requestBody
       })
 
@@ -92,7 +92,6 @@ table {
 }
 th, td {
   padding: 8px;
-  text-align: left;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }

@@ -10,6 +10,7 @@
         <input type="text" id="password" v-model="password">
       </div>
       <button v-on:click="login">로그인</button>
+      <button><router-link to="/Signup">회원가입</router-link></button>
     </form>
 
   </div>
