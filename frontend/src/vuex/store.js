@@ -1,6 +1,7 @@
 import {createStore} from "vuex";
 import getters from "./getters";
-import mutations from "./mutations";
+import mutations from "./mutation";
+import actions from "@/vuex/actions.js";
 
 /*
 * Store : 어플리케이션 상태를 보유하고 있는 컨테이너
@@ -57,4 +58,6 @@ export default createStore({
             - 접근
             <div>{{ $store.getters.reverseMessage }}</div>
     */
+
+    actions,
 })
