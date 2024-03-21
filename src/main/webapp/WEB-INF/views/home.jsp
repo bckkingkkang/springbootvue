@@ -9,17 +9,8 @@
     <h1>HOME</h1>
 
     <div>
-    <form id="login_form">
-        <div>
-            <input type="text" placeholder="user Id" name="id">
-        </div>
-        <div>
-            <input type="password" placeholder="user Password" name="password">
-        </div>
-    </form>
-    </div>
-    <div>
-        <button type="submit" onclick="location.href='/main'">login</button>
+        <button type="submit" onclick="location.href='/member/login'">로그인</button>
+        <button type="submit" onclick="location.href='/member/signup'">회원가입</button>
         <button type="submit" onclick="location.href='/list'">board list</button>
     </div>
     <script>

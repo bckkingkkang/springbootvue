@@ -17,30 +17,25 @@ import java.util.List;
 @Controller
 @Log4j2
 @RequiredArgsConstructor
-@RequestMapping("/")
 public class TestController {
 
     private final BoardService boardService;
 
-    @RequestMapping("")
+    @RequestMapping("/")
     private String HomeTest() {
         return "home";
     }
 
-    @RequestMapping("main")
+    @RequestMapping("/main")
     private String MainTest() {
         return "main";
     }
 
-    @GetMapping("list")
+    @GetMapping("/list")
     private ModelAndView list(ModelAndView mav ) {
         List<BoardVo> board_list = boardService.getBoardList();
 
         mav.addObject("board_list", board_list);
-
-//        board_list.add("1");
-//        board_list.add("2");
-//        board_list.add("3");
 
         return mav;
     }

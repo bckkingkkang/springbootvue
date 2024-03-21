@@ -1,19 +1,15 @@
-package com.example.springbootvue.entity;
+package com.example.springbootvue.vo;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity(name = "user")
-public class UserEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserVo {
     private String idx;
     private String id;
     private String password;
